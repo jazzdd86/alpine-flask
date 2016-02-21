@@ -2,12 +2,14 @@ FROM alpine
 MAINTAINER Christian Gatzlaff <cgatzlaff@gmail.com>
 
 # basic flask environment
-RUN apk add --update --no-cache bash git nginx uwsgi uwsgi-python py-pip \
+RUN apk add --no-cache bash git nginx uwsgi uwsgi-python py-pip \
 	&& pip install --upgrade pip \
 	&& pip install flask
 
 # application folder
 ENV APP_DIR /app
+
+# app dir
 RUN mkdir ${APP_DIR} \
 	&& chown -R nginx:nginx ${APP_DIR} \
 	&& chmod 777 /run/ -R \

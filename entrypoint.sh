@@ -19,8 +19,8 @@ if [ ! -f /debug0 ]; then
 				touch /debug1
                         	;;
 	                o)
-				apk add --update --no-cache docker
-				apk add shadow --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
+				apk add --no-cache docker
+				apk add shadow --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ --allow-untrusted
 				groupmod -g ${OPTARG} docker
 				gpasswd -a nginx docker
         	                ;;
@@ -38,4 +38,3 @@ else
 	echo "Running app in production mode!"
 	nginx && uwsgi --ini /app.ini
 fi
-
