@@ -1,10 +1,10 @@
-FROM alpine
+FROM alpine:edge
 MAINTAINER Christian Gatzlaff <cgatzlaff@gmail.com>
 
 # basic flask environment
-RUN apk add --no-cache bash git nginx uwsgi uwsgi-python py-pip \
-	&& pip install --upgrade pip \
-	&& pip install flask
+RUN apk add --no-cache bash git nginx uwsgi uwsgi-python3 \
+	&& pip3 install --upgrade pip \
+	&& pip3 install flask
 
 # application folder
 ENV APP_DIR /app
