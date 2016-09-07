@@ -1,5 +1,7 @@
 # [Alpine OS](https://hub.docker.com/_/alpine/) running [Python Flask](http://flask.pocoo.org/)
 
+[![](https://images.microbadger.com/badges/image/jazzdd/alpine-flask.svg)](https://microbadger.com/images/jazzdd/alpine-flask "Get your own image badge on microbadger.com")
+
 This image is used to run flask applications. To start a container use
 
 ```
