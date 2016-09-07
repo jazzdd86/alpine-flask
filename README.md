@@ -1,7 +1,13 @@
-# [Alpine OS](https://hub.docker.com/_/alpine/) running [Python Flask](http://flask.pocoo.org/)
+# [Alpine OS](https://hub.docker.com/_/alpine/) running [Python Flask](http://flask.pocoo.org/) (with Python 2.7 or 3.5)
 
 [![](https://images.microbadger.com/badges/image/jazzdd/alpine-flask.svg)](https://microbadger.com/images/jazzdd/alpine-flask "Get your own image badge on microbadger.com")
 
+
+## Tags:
+latest - flask running on python 2.7
+python3 - flask running on python 3.5
+
+---
 This image is used to run flask applications. To start a container use
 
 ```
