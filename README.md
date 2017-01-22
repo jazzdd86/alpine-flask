@@ -4,8 +4,8 @@
 
 
 ## Tags:
-latest - flask running on python 2.7
-python3 - flask running on python 3.5
+* latest - flask running on python 2.7
+* python3 - flask running on python 3.5
 
 ---
 This image is used to run flask applications. To start a container use
