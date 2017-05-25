@@ -35,5 +35,7 @@ if [ -e /debug1 ]; then
 	python3 app.py
 else
 	echo "Running app in production mode!"
+	openssl genrsa -out /etc/nginx/server.key 2048
+	openssl req -new -x509 -key /etc/nginx/server.key -out /etc/nginx/server.crt -days 3650 -subj /CN=localhost
 	nginx && uwsgi --ini /app.ini
 fi
