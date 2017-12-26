@@ -5,7 +5,7 @@
 
 ## Tags:
 * latest - flask running on python 2.7
-* python3 - flask running on python 3.5
+* python3 - flask running on python 3.6
 
 ---
 This image is used to run flask applications. To start a container use
@@ -32,6 +32,13 @@ If an additional package is needed during runtime of the container it can be ins
 ```
 docker exec YOUR_CONTAINER_ID/NAME /bin/bash -c "pip install package-name"
 ```
+
+---
+## Installing additional Alpine packages
+Sometimes, additional python or flask packages need to build some dependecies. Additional Alpine packages can be installed into the container using a requirements file similar to the python requirements file. Listed packages will be installed on the first run of the container.
+
+You need to save a file named requirements_image.txt into the root folder of your app, which is mounted to the /app folder of the container. Just write the packages separated with space or a new line into the file. 
+
 
 ---
 ## Internals
