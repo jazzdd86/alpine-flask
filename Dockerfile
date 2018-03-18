@@ -14,7 +14,7 @@ RUN mkdir ${APP_DIR} \
 	&& chown -R nginx:nginx ${APP_DIR} \
 	&& chmod 777 /run/ -R \
 	&& chmod 777 /root/ -R
-VOLUME [${APP_DIR}]
+VOLUME ${APP_DIR}
 WORKDIR ${APP_DIR}
 
 # expose web server port
