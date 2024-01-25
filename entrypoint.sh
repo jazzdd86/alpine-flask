@@ -4,8 +4,10 @@ if [ ! -f /debug0 ]; then
 		apk add --no-cache $(cat requirements_image.txt) 
 	fi
 
+    	pip3 install --upgrade pip --break-system-packages
+
 	if [ -e requirements.txt ]; then
-		pip3 install -r requirements.txt
+		pip3 install -r requirements.txt --break-system-packages
 	fi
 
 	touch /debug0
